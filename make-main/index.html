@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maquiagem</title>
+  
+
+  <link rel="stylesheet" type="text/css" href="meduarda.css">
+</head>
+<body>
+  <nav class="menu">
+    <h1>Eduarda *****- Maquiadora ♕ </h1>
+     <ul >
+        <li><a href="#sobre">Sobre mim</a></li>
+         <li><a href="#port">Portifólio</a></li>
+         <li><a href="#contt">Contato</a></li>
+         <li><a href="#valor">Orçamento</a></li>
+      </ul>
+    </nav>
+  <nav class=" main">
+
+    <h2 id="sobre">Sobre mim! ☟</h2>
+    <div class="principal" >  
+     <p >
+      <embed classe= " video" src="video.mp4" autostart="true" height="290" width="500" /> </p>
+      <p class="principal-p"> Sou a Maria Eduarda, tenho XX anos e sou acadêmica de estética na U**. A maquiagem é uma grande paixão e trabalho maquiando em ******** há dois anos.</p>
+     
+    </div>
+     
+      <h2 id="port">Portifólio ♡ </h2>
+    <nav class="meio">
+      <img src="4.jpg">
+      <img src="1.jpg">
+      <img src="2.jpg">
+      
+    </nav>
+    <nav>
+      <h2 id="contt">Contato ✆:</h2>
+      <p class="parag-meio"> Telefone: (XX)99111-XXXX</p>
+      <p class="parag-meio"> Instagram: @edXXXXXXX</p>
+      <h2 id="valor">Orçamento 💰:</h2>
+      <p class="parag-meio">Atendimento em domicilio:Á negociar</p>
+      <p class="parag-meio">Valores: A partir de R$80,00. </p>
+    </nav>
+  </nav>
+  <footer>
+    <h5> Desenvolvido por ➠ Daniele Santos</h5>
+  </footer>
+ <script>
+  let menuItens = document.querySelectorAll('.menu a[href^="#"]');
+   menuItens.forEach(item=>{
+    item.addEventListener('click', onClick);
+   })
+   function onClick(evento){
+    evento.preventDefault();
+    let element = evento.target;
+    let id = element.getAttribute('href');
+    let to = document.querySelector(id).offsetTop;
+
+    window.scroll({
+      top: to - 80,
+      behavior:"smooth",
+    })
+   }
+ </script>
+</body>
+</html>
